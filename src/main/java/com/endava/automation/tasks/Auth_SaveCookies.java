@@ -5,22 +5,15 @@ import com.microsoft.playwright.*;
 
 import java.nio.file.Paths;
 
-public class Auth extends Login {
+public class Auth_SaveCookies extends Login {
 
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-        BrowserContext brContext = browser.newContext();
+        BrowserContext brContext = browser.newContext(new Browser.NewContextOptions().setStorageStatePath(Paths.get("applogin.json")));
 
         Page page = brContext.newPage();
         page.navigate(BaseUrl);
-        page.click(LogIn);
-        page.fill(UserName,"testafloyd@gmail.com");
-        page.fill(Password,"asdasd1234");
-        page.click(Submit);
-
-
-        brContext.storageState(new BrowserContext.StorageStateOptions().setPath(Paths.get("applogin.json")));
 
     }
 }

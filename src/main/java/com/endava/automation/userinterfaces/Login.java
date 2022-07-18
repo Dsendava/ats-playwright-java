@@ -6,8 +6,9 @@ public class Login {
 
     public static final String BaseUrl = "http://automationpractice.com/index.php";
 
-    private Page login;
-    Locator emailInput = login.locator("#email");
-    Locator passwordInput = login.locator("#passwd");
-    Locator signInButton = login.locator("#SubmitLogin");
+    public final static String UserName = "#email";
+    public final static String Password = "#passwd";
+    public final static String LogIn = "a:text('Sign in')";
+    public final static String Submit = "#SubmitLogin";
+
 }
