@@ -1,21 +1,24 @@
 package com.endava.automation.stepdefinition.Login;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
-import com.endava.automation.userinterfaces.Login;
-
+import com.endava.automation.models.User;
+import com.endava.automation.tasks.Auth;
+import com.microsoft.playwright.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static com.endava.automation.userinterfaces.Login.BaseUrl;
+
 
 public class Fillin {
+
+    Playwright playwright = Playwright.create();
+    Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+    BrowserContext brContext = browser.newContext();
+    Page page = brContext.newPage();
+    Auth auth = new Auth(page);
+
+
     @Given("that I have navigated to login page")
     public void thatIHaveNavigatedToLoginPage() {
 

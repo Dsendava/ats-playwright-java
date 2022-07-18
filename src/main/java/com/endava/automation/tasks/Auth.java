@@ -7,20 +7,17 @@ import java.nio.file.Paths;
 
 public class Auth extends Login {
 
-    public static void main(String[] args) {
-        Playwright playwright = Playwright.create();
-        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-        BrowserContext brContext = browser.newContext();
-
-        Page page = brContext.newPage();
-        page.navigate(BaseUrl);
-        page.click(LogIn);
-        page.fill(UserName,"testafloyd@gmail.com");
-        page.fill(Password,"asdasd1234");
-        page.click(Submit);
-
-
-        brContext.storageState(new BrowserContext.StorageStateOptions().setPath(Paths.get("applogin.json")));
-
+    public Auth(Page page) {
+        super(page);
+        this.fillinLogin = new FillinLogin(page);
     }
+
+
+    public void loginIntoApplication(String email, String pass) {
+        fillinLogin.enterUserName(email);
+        fillinLogin.enterPassword(pass);
+        fillinLogin.clickSubmtButton();
+    }
+
+
 }

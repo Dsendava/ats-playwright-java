@@ -17,8 +17,8 @@ public class Fillin {
     public void myAccountShouldBeCreatedAndIShouldSeeMyAccountPage() {
     }
 
-    @When("I fill the form with {string} {string} {string} {string} {string} <zipcode> <number>")
-    public void iFillTheFormWithNameLastnamePasswordAddressCityZipcodeNumber() {
+    @When("I fill the form with {string} {string} {string} {string} {string} {string} {string}")
+    public void iFillTheFormWithNameLastnamePasswordAddressCityZipcodeNumber(String name, String lastname, String password, String address, String zipcode, String  number, String type) {
     }
 
     @Then("I should see the <type> error")

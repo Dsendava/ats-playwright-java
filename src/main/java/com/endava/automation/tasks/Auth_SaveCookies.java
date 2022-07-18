@@ -7,6 +7,10 @@ import java.nio.file.Paths;
 
 public class Auth_SaveCookies extends Login {
 
+    public Auth_SaveCookies(Page page) {
+        super(page);
+    }
+
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
