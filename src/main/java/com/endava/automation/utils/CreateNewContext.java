@@ -1,15 +1,18 @@
 package com.endava.automation.utils;
 
 import com.microsoft.playwright.*;
+import static com.endava.automation.utils.SetUpProperties.GetBoolean;
 
-public class CreateNewContext {
-    public static Playwright playwright = Playwright.create();
-    public static Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(true));
-    public static BrowserContext brContext = browser.newContext();
-    public static Page page = brContext.newPage();
+public interface CreateNewContext {
 
-    public static Page getPage(){
+    Playwright playwright = Playwright.create();
+    Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(GetBoolean("CONFIG.SET_HEADLESS")));
+    BrowserContext brContext = browser.newContext();
+    Page page = brContext.newPage();
+
+    static Page getPage() {
         return page;
     }
+
 
 }

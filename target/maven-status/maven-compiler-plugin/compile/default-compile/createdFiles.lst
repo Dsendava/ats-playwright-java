@@ -1,2 +1,14 @@
+com\endava\automation\tasks\Auth_SaveCookies.class
+com\endava\automation\questions\IsVisible.class
+com\endava\automation\questions\VerifyPage.class
+com\endava\automation\userinterfaces\RegisterForm.class
+com\endava\automation\models\User.class
+com\endava\automation\userinterfaces\Login.class
 examples\Demo.class
 examples\example.class
+com\endava\automation\tasks\Auth.class
+com\endava\automation\utils\CreateNewContext.class
+com\endava\automation\iteractions\FillinLogin.class
+com\endava\automation\tasks\Register$SearchPage.class
+com\endava\automation\tasks\Register.class
+com\endava\automation\questions\Contains.class

@@ -1,0 +1,4 @@
+com\endava\automation\stepdefinition\Register\Fillin.class
+com\endava\automation\runners\Login\LoginTestRunner.class
+com\endava\automation\stepdefinition\Login\Fillin.class
+com\endava\automation\runners\Register\RegisterTestRunner.class

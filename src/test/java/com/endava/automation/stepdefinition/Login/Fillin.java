@@ -3,6 +3,7 @@ package com.endava.automation.stepdefinition.Login;
 import com.endava.automation.models.User;
 import com.endava.automation.tasks.Auth;
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,13 +12,9 @@ import org.testng.Assert;
 import static com.endava.automation.userinterfaces.Login.BaseUrl;
 
 
-public class Fillin {
+public class Fillin implements PlaywrightAssertions {
 
 
-//    Playwright playwright = Playwright.create();
-//    Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
-//    BrowserContext brContext = browser.newContext();
-//    Page page = brContext.newPage();
     Page newPage = CreateNewContext.getPage();
     Auth auth = new Auth(newPage);
 
@@ -40,5 +37,6 @@ public class Fillin {
 
     @Then("I should see the {string} error")
     public void iShouldSeeTheTypeError(String type) {
+
     }
 }

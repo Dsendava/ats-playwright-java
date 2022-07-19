@@ -1,15 +1,19 @@
 package com.endava.automation.userinterfaces;
 
+
 import com.microsoft.playwright.*;
 
-public class Login {
 
-    public static final String BaseUrl = "http://automationpractice.com/index.php";
+import static com.endava.automation.utils.SetUpProperties.File;
 
-    public final static String UserName = "#email";
-    public final static String Password = "#passwd";
-    public final static String LogIn = "a:text('Sign in')";
-    public final static String Submit = "#SubmitLogin";
+public class Login  {
+
+    public final Page page;
+    public static final String BaseUrl = File.getProperty("UI.BASE_URL");
+    public final static String UserName = File.getProperty("ID.EMAIL");
+    public final static String Password = File.getProperty("ID.PASSWORD");
+    public final static String LogIn = File.getProperty("ID.LOGIN");
+    public final static String Submit = File.getProperty("ID.SUBMITLOGIN");
 
     public static Locator username;
     public static Locator password;
