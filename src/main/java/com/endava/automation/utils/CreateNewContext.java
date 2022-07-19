@@ -1,6 +1,7 @@
 package com.endava.automation.utils;
 
 import com.microsoft.playwright.*;
+
 import static com.endava.automation.utils.SetUpProperties.GetBoolean;
 
 public interface CreateNewContext {
@@ -13,6 +14,5 @@ public interface CreateNewContext {
     static Page getPage() {
         return page;
     }
-
 
 }

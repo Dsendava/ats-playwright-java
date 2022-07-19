@@ -18,6 +18,4 @@ public class User {
     public String getPass() {
         return pass;
     }
-
-
 }

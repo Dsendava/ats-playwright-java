@@ -9,9 +9,8 @@ import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
 
-import static com.endava.automation.userinterfaces.Login.BaseUrl;
+import static com.endava.automation.utils.CreateNewContext.browser;
 import static com.endava.automation.utils.SetUpProperties.File;
 
 
@@ -40,7 +39,6 @@ public class Fillin implements PlaywrightAssertions {
         VerifyPage.CheckUrl(File.getProperty("UI.URL_MY_ACCOUNT"), newPage);
 
     }
-
 
     @Then("I should see the {string} error")
     public void iShouldSeeTheTypeError(String type) {

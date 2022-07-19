@@ -1,6 +1,6 @@
 #LoginTest.feature
 
-Feature: Login successful
+Feature: Login Business Validation
 
 Scenario Outline: Negative scenarios - Login with invalid credentials
   Given that I have navigated to login page

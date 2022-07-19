@@ -18,21 +18,14 @@ public interface SetUpProperties {
     }
 
     static Boolean GetBoolean(String Property) {
-
         return java.lang.Boolean.valueOf(File.getProperty(Property));
-
     }
 
     static Integer GetInt(String Property) {
-
         return java.lang.Integer.valueOf(File.getProperty(Property));
-
     }
 
     static Double GetDouble(String Property) {
-
         return java.lang.Double.valueOf(File.getProperty(Property));
-
     }
-
 }

@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
         plugin = {"pretty"})
 public class LoginTestRunner implements SetUpProperties {
     @BeforeClass
-    public static void SetUp(){
+    public static void SetUp() {
         SetUpProperties.ReadProperties();
     }
 }
