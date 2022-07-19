@@ -6,17 +6,20 @@ import com.microsoft.playwright.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 import static com.endava.automation.userinterfaces.Login.BaseUrl;
 
 
 public class Fillin {
 
-    Playwright playwright = Playwright.create();
-    Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-    BrowserContext brContext = browser.newContext();
-    Page page = brContext.newPage();
-    Auth auth = new Auth(page);
+
+//    Playwright playwright = Playwright.create();
+//    Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+//    BrowserContext brContext = browser.newContext();
+//    Page page = brContext.newPage();
+    Page newPage = CreateNewContext.getPage();
+    Auth auth = new Auth(newPage);
 
 
     @Given("that I have navigated to login page")
@@ -30,6 +33,8 @@ public class Fillin {
 
     @Then("I should see my account page")
     public void iShouldSeeMyAccountPage() {
+        VerifyPage.CheckUrl("http://automationpractice.com/index.php?controller=my-account", newPage);
+
     }
 
 

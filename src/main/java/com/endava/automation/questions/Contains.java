@@ -1,4 +1,4 @@
 package com.endava.automation.questions;
 
-public class AccessToTheWeb {
+public class Contains {
 }

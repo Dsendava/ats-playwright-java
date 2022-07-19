@@ -1,7 +1,6 @@
 #LoginTest.feature
 
 Feature: Login successful
-
   Scenario Outline: Negative scenarios - Login with invalid structural validation
     Given that I have navigated to login page
     When I login with '<username>' and '<password>'

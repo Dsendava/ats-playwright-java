@@ -14,6 +14,7 @@ public class Auth extends Login {
 
 
     public void loginIntoApplication(String email, String pass) {
+        fillinLogin.clickLoginButton();
         fillinLogin.enterUserName(email);
         fillinLogin.enterPassword(pass);
         fillinLogin.clickSubmtButton();

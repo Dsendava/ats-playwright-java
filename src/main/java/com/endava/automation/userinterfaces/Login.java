@@ -16,12 +16,12 @@ public class Login {
     public static Locator login;
     public static Locator submit;
 
-    public Login (Page page){
-     this.page = page;
-     this.username = page.locator(UserName);
-     this.password = page.locator(Password);
-     this.login = page.locator(LogIn);
-     this.submit = page.locator(Submit);
+    public Login(Page page) {
+        this.page = page;
+        this.username = page.locator(UserName);
+        this.password = page.locator(Password);
+        this.login = page.locator(LogIn);
+        this.submit = page.locator(Submit);
 
     }
 

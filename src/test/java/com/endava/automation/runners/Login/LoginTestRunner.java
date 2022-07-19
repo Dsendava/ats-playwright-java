@@ -11,5 +11,4 @@ import io.cucumber.junit.CucumberOptions;
         glue = "com.endava.automation.stepdefinition.Login",
         plugin = {"pretty"})
 public class LoginTestRunner {
-
 }
