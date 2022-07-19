@@ -1,11 +1,14 @@
 package com.endava.automation.tasks;
 
+import com.endava.automation.iteractions.FillinLogin;
 import com.endava.automation.userinterfaces.Login;
 import com.microsoft.playwright.*;
 
 import java.nio.file.Paths;
 
 public class Auth extends Login {
+
+    FillinLogin fillinLogin;
 
     public Auth(Page page) {
         super(page);

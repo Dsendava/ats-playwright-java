@@ -11,7 +11,7 @@ Feature: Register flow
   Scenario Outline: Negative scenarios - Register with incomplete information
     Given that I have navigated to register page
     When I fill the form with '<name>' '<lastname>' '<password>' '<address>' '<city>' '<zipcode>' '<number>'
-    Then I should see the <type> error
+    Then I should see the '<type>' error
     Examples:
       | name	   	   | lastname	    | password 	      | address	      | city	      | zipcode     | number	  | type 	|
       | undefined	   | some lastname  | some password   | Some address  | Some city     | 11111	     | 1111111111 | name 	|
