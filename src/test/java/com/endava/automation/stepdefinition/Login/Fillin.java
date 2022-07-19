@@ -37,7 +37,7 @@ public class Fillin implements PlaywrightAssertions {
 
     @Then("I should see my account page")
     public void iShouldSeeMyAccountPage() {
-        VerifyPage.CheckUrl("http://automationpractice.com/index.php?controller=my-account", newPage);
+        VerifyPage.CheckUrl(File.getProperty("UI.URL_MY_ACCOUNT"), newPage);
 
     }
 
